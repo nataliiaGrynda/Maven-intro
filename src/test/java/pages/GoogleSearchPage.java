@@ -24,6 +24,7 @@ GoogleSearchResultPage
 
 
   public GoogleSearchPage(WebDriver driver) {
+
     PageFactory.initElements(driver, this);
   }
 @FindBy(name = "q")
@@ -32,6 +33,8 @@ GoogleSearchResultPage
 
 
 
+  @FindBy(linkText = "Store")
+  public WebElement storeLink;
 
 
 

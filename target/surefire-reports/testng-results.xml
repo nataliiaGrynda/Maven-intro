@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="1" total="3" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="14392" started-at="2022-05-29T15:05:08 CDT" finished-at="2022-05-29T15:05:22 CDT">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="14392" started-at="2022-05-29T15:05:08 CDT" finished-at="2022-05-29T15:05:22 CDT">
+      <class name="scripts._01_AppleTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:scripts._01_AppleTest@464bee09]" name="setup" is-config="true" duration-ms="2728" started-at="2022-05-29T15:05:08 CDT" finished-at="2022-05-29T15:05:10 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testAppleTitle()[pri:1, instance:scripts._01_AppleTest@464bee09]" name="testAppleTitle" duration-ms="1066" started-at="2022-05-29T15:05:10 CDT" description="TC235" finished-at="2022-05-29T15:05:11 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAppleTitle -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:scripts._01_AppleTest@464bee09]" name="teardown" is-config="true" duration-ms="3676" started-at="2022-05-29T15:05:11 CDT" finished-at="2022-05-29T15:05:15 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:scripts._01_AppleTest@464bee09]" name="setup" is-config="true" duration-ms="2117" started-at="2022-05-29T15:05:15 CDT" finished-at="2022-05-29T15:05:17 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testAppleURL()[pri:2, instance:scripts._01_AppleTest@464bee09]" name="testAppleURL" duration-ms="1092" started-at="2022-05-29T15:05:17 CDT" finished-at="2022-05-29T15:05:18 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAppleURL -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:scripts._01_AppleTest@464bee09]" name="teardown" is-config="true" duration-ms="3688" started-at="2022-05-29T15:05:18 CDT" finished-at="2022-05-29T15:05:22 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- scripts._01_AppleTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

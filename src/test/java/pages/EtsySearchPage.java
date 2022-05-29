@@ -10,7 +10,7 @@ import java.util.List;
 public class EtsySearchPage {
 
 
-    public EtsySearchPage(WebDriver driver){
+    public EtsySearchPage(WebDriver driver) {
       PageFactory.initElements(driver, this);
     }
 
