@@ -1,12 +1,7 @@
 package scripts;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
-import pages.TGApplicationPage;
-import utilities.Driver;
 
 public class _02_TechGlobalTest extends Base {
 
