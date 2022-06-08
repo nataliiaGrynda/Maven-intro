@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 public class EbayPage {
 
   public EbayPage(WebDriver driver){
+
     PageFactory.initElements(driver, this);
   }
 

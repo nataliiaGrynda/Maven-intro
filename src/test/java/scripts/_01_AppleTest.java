@@ -9,7 +9,6 @@ public class _01_AppleTest extends Base{
 
   // 1. Initial set up - before each test
 
-
   // 2. Validation of test - test
   @Test(priority = 1, description = "TC235")
   public void testAppleTitle(){

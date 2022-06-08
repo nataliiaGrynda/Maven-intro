@@ -27,11 +27,8 @@ GoogleSearchResultPage
 
     PageFactory.initElements(driver, this);
   }
-@FindBy(name = "q")
- public WebElement searchInpytBox;
-
-
-
+  @FindBy(name = "q")
+  public WebElement searchInpytBox;
 
   @FindBy(linkText = "Store")
   public WebElement storeLink;

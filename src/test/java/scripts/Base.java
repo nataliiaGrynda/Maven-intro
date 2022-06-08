@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.asserts.SoftAssert;
 import pages.*;
 import utilities.Driver;
 
@@ -17,31 +18,39 @@ public class Base {
   WebDriver driver;
   WebDriverWait explicitWait;
   Wait fluentWait;
-  EtsySearchPage etsySearchPage;
+  SoftAssert softAssert;
+  EtsySearchPage etsySearchPage;//
   TGApplicationPage tgApplicationPage;
   GoogleSearchPage googleSearchPage;
   GoogleSearchResultPage googleSearchResultPage;
   HeroAppPage heroAppPage;
   FacebookPage facebookPage;
   ExpediaSearchPage expediaSearchPage;
+  AmazonHomePage amazonHomePage;
+  RediffHomePage rediffHomePage;
+
 
   @BeforeMethod
   public void setup(){
     driver = Driver.getDriver();
     explicitWait = new WebDriverWait(driver, 30);
     fluentWait = new FluentWait(driver).withTimeout(30, TimeUnit.SECONDS).pollingEvery(2, TimeUnit.SECONDS).ignoring(Exception.class);
-    etsySearchPage = new EtsySearchPage(driver);
+    softAssert = new SoftAssert();
+    etsySearchPage = new EtsySearchPage(driver);//where we create the object of that page
     tgApplicationPage = new TGApplicationPage(driver);
     googleSearchPage = new GoogleSearchPage(driver);
     googleSearchResultPage = new GoogleSearchResultPage(driver);
-    heroAppPage = new HeroAppPage(driver);
+    heroAppPage = new HeroAppPage(driver);// it is already instantiated i don't have to create a new object
     facebookPage = new FacebookPage(driver);
     expediaSearchPage = new ExpediaSearchPage(driver);
+    amazonHomePage = new AmazonHomePage(driver);
+   rediffHomePage = new RediffHomePage(driver);
+
   }
 
   @AfterMethod
   public void teardown(){
+    softAssert.assertAll();
     Driver.quitDriver();
   }
-
 }

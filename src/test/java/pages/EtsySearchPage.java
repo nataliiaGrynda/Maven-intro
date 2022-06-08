@@ -1,5 +1,6 @@
 package pages;
 
+import org.omg.CORBA.PUBLIC_MEMBER;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,9 +11,9 @@ import java.util.List;
 public class EtsySearchPage {
 
 
-    public EtsySearchPage(WebDriver driver) {
-      PageFactory.initElements(driver, this);
-    }
+    public EtsySearchPage(WebDriver driver) {// is already set up in the Driver class, will all the maximize and implicit waits
+      PageFactory.initElements(driver, this);// introduces all the web elements that i will use in the page
+    }//instantiate all my webElement and store them here
 
 
     //Locate all Etsy Search Page web elements here
@@ -31,6 +32,17 @@ public class EtsySearchPage {
     @FindBy (css = "ul[role='menubar'] span")
     public List<WebElement> mainHeaderLinks;
 
+    @FindBy(css = ".signin-header-action")
+    public WebElement signInButton;
+
+    @FindBy(css = ".wt-overlay--animation-done")
+    public WebElement signInModal;
+
+    @FindBy(id = "join-neu-overlay-title")
+    public WebElement signInModalHeading;
+
+
 
   }
 
+//also create reusable methods to

@@ -23,7 +23,7 @@ Select "Male" radio button and and validate "Male" is selected and "Female" is d
     Waiter.pause(2);
 
     for(WebElement element : facebookPage.genderRadioButtons){
-      Assert.assertTrue(element.isDisplayed(), "Element IS NOT displayed");
+      softAssert.assertTrue(element.isDisplayed(), "Element IS NOT displayed");//
       Assert.assertTrue(element.isEnabled(), "Element IS NOT enabled");
       Assert.assertFalse(element.isSelected(), "Element IS selected");
     }
@@ -36,5 +36,7 @@ Select "Male" radio button and and validate "Male" is selected and "Female" is d
     Waiter.pause(2);
     Assert.assertTrue(facebookPage.genderRadioButtons.get(1).isSelected());
     Assert.assertFalse(facebookPage.genderRadioButtons.get(0).isSelected());
+
+
   }
 }

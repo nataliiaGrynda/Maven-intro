@@ -6,9 +6,8 @@ import org.testng.annotations.Test;
 import utilities.Waiter;
 
 public class _05_CheckBoxTest extends Base{
-  /*
-Go to http://the-internet.herokuapp.com/
-Click on "Checkboxes" link
+
+/*Click on "Checkboxes" link
 Validate "checkbox 1" is displayed, enabled and not selected
 Validate "checkbox 2" is displayed, enabled and selected
 Select "checkbox 1" and validate it is selected
