@@ -18,7 +18,7 @@ public class Base {
   WebDriver driver;
   WebDriverWait explicitWait;
   Wait fluentWait;
-  SoftAssert softAssert;
+  SoftAssert softAssert;//initialize softAssert
   EtsySearchPage etsySearchPage;//
   TGApplicationPage tgApplicationPage;
   GoogleSearchPage googleSearchPage;
@@ -28,14 +28,14 @@ public class Base {
   ExpediaSearchPage expediaSearchPage;
   AmazonHomePage amazonHomePage;
   RediffHomePage rediffHomePage;
-
+  TGHomePage tgHomePage;
 
   @BeforeMethod
   public void setup(){
     driver = Driver.getDriver();
     explicitWait = new WebDriverWait(driver, 30);
     fluentWait = new FluentWait(driver).withTimeout(30, TimeUnit.SECONDS).pollingEvery(2, TimeUnit.SECONDS).ignoring(Exception.class);
-    softAssert = new SoftAssert();
+    softAssert = new SoftAssert();//initialize it in the before method
     etsySearchPage = new EtsySearchPage(driver);//where we create the object of that page
     tgApplicationPage = new TGApplicationPage(driver);
     googleSearchPage = new GoogleSearchPage(driver);
@@ -45,7 +45,7 @@ public class Base {
     expediaSearchPage = new ExpediaSearchPage(driver);
     amazonHomePage = new AmazonHomePage(driver);
    rediffHomePage = new RediffHomePage(driver);
-
+   tgHomePage = new TGHomePage(driver);
   }
 
   @AfterMethod

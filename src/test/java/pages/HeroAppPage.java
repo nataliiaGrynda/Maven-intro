@@ -33,7 +33,30 @@ public class HeroAppPage {
 
   @FindBy(id = "mce_0_ifr")
   public WebElement innerIFrame;
+//
+//  @FindBy(xpath = "//a[text()='Click Here']")
+//  public WebElement clickHereLink;
 
+  @FindBy(css = "#content a")//moving from parent to child
+  public WebElement clickHereLink;
+
+  @FindBy(css = "#content h3")
+  public WebElement windowsH3;
+
+  @FindBy(xpath = "//h3")
+  public WebElement newWindowH3;
+
+  @FindBy(id = "file-upload")
+  public WebElement chooseFileInputBox;
+
+  @FindBy(id = "file-submit")
+  public WebElement uploadFileButton;
+
+  @FindBy(xpath = "//h3")
+  public WebElement fileUploadedH3;
+
+  @FindBy(id = "uploaded-files")
+  public WebElement uploadedFileText;
 
   public void clickOnLink(String linkText){
     for (WebElement link : links) {
@@ -51,12 +74,4 @@ public class HeroAppPage {
       }
     }
   }
-
-
-
-
-
-
-
-
 }
