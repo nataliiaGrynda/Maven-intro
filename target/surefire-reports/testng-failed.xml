@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Regression]">
+  <test thread-count="5" verbose="0" name="All Functionalities(failed)">
+    <classes>
+      <class name="scripts._08_Alerts">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="testAmazonAddressModal"/>
+        </methods>
+      </class> <!-- scripts._08_Alerts -->
+      <class name="scripts._11_FileUpload">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="testFileUpload1"/>
+        </methods>
+      </class> <!-- scripts._11_FileUpload -->
+      <class name="scripts._07_DropdownTest">
+        <methods>
+          <include name="setup"/>
+          <include name="testExpediaDropdowns"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- scripts._07_DropdownTest -->
+      <class name="scripts._09_IFrames">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="locateMoneyFrame"/>
+        </methods>
+      </class> <!-- scripts._09_IFrames -->
+      <class name="scripts._12_Actions_Class">
+        <methods>
+          <include name="setup"/>
+          <include name="sendKeysToAnElement"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- scripts._12_Actions_Class -->
+    </classes>
+  </test> <!-- All Functionalities(failed) -->
+</suite> <!-- Failed suite [Regression] -->

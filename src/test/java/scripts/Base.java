@@ -1,6 +1,7 @@
 package scripts;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,6 +20,7 @@ public class Base {
   WebDriverWait explicitWait;
   Wait fluentWait;
   SoftAssert softAssert;//initialize softAssert
+  Actions actions;
   EtsySearchPage etsySearchPage;//
   TGApplicationPage tgApplicationPage;
   GoogleSearchPage googleSearchPage;
@@ -30,12 +32,14 @@ public class Base {
   RediffHomePage rediffHomePage;
   TGHomePage tgHomePage;
 
+
   @BeforeMethod
   public void setup(){
     driver = Driver.getDriver();
     explicitWait = new WebDriverWait(driver, 30);
     fluentWait = new FluentWait(driver).withTimeout(30, TimeUnit.SECONDS).pollingEvery(2, TimeUnit.SECONDS).ignoring(Exception.class);
     softAssert = new SoftAssert();//initialize it in the before method
+    actions = new Actions(driver);
     etsySearchPage = new EtsySearchPage(driver);//where we create the object of that page
     tgApplicationPage = new TGApplicationPage(driver);
     googleSearchPage = new GoogleSearchPage(driver);

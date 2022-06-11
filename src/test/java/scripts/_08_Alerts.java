@@ -1,15 +1,8 @@
 package scripts;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import utilities.AlertHandler;
 import utilities.Waiter;
-
-import java.security.Key;
 
 public class _08_Alerts extends Base {
 

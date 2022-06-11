@@ -21,6 +21,8 @@ Deselect both "checkbox 1" and "checkbox 2" and validate they are deselected
     Waiter.pause(2);
     heroAppPage.clickOnLink("Checkboxes");
 
+   // @FindBy(css = "#checkboxes>input")
+   // public List<WebElement> checkboxes;
     //Validate both checkboxes are displayed and enabled
     for(WebElement element: heroAppPage.checkboxes){
       Assert.assertTrue(element.isDisplayed());

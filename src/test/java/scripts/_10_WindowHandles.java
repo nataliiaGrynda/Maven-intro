@@ -2,7 +2,6 @@ package scripts;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import utilities.Waiter;
 
 public class _10_WindowHandles extends Base{
 

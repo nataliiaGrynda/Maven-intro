@@ -1,7 +1,6 @@
 package scripts;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.Waiter;
