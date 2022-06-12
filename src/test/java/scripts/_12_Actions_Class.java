@@ -73,12 +73,10 @@ AUTO LOAN CALCULATOR
 //        actions.moveToElement(registerForIntroLink).perform();
 //        Waiter.pause(2);
 //        actions.click(registerForIntroLink).perform();
-
-    actions.moveToElement(registerForIntroLink).pause(Duration.ofSeconds(2)).click().perform();
+      actions.moveToElement(registerForIntroLink).pause(Duration.ofSeconds(2)).click().perform();
 
     Assert.assertEquals(driver.getCurrentUrl(), "https://www.techglobalschool.com/apply-now-1");
-
-  }
+    }
 
  /*
 Go to https://www.techglobalschool.com/
@@ -124,7 +122,32 @@ Test name = Actions class | send keys to an element
    actions.sendKeys(googleSearchPage.searchInpytBox, "hello").perform();
    Assert.assertEquals(googleSearchPage.searchInpytBox.getAttribute("value"), "hello");
   }
+  /*
+Go to https://www.etsy.com/
+Hover over on "Jewelry & Accessories" menu item
+Validate below categories are displayed with their expected texts
+Accessories
+Bags & Purses
+Necklaces
+Rings
+Earrings
+Bracelets
+Body Jewelry
+All Jewelry
+ */
+  @Test(priority = 8,description = "Action | Etsy")
+  public void navigateToList() {
+    driver.get("https://www.etsy.com/");
+    actions.moveToElement(etsySearchPage.mainHeaderLinks.get(1)).perform();
+
+    String[] text = {"Accessories", "Bags & Purses", "Necklaces", "Rings", "Earrings", "Bracelets", "Body Jewelry", "All Jewelry"};
+    for (int i = 0; i < 8; i++) {
+      Waiter.waitUntilTextToBePresentInElement(driver, 10, etsySearchPage.jewelryAndAccessoriesItems.get(i), text[i]);
+      Assert.assertEquals(etsySearchPage.jewelryAndAccessoriesItems.get(i).getText(), text[i]);
+    }
+  }
 }
+
 
 
 

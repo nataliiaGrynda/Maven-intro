@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -57,6 +58,15 @@ public class HeroAppPage {
 
   @FindBy(id = "uploaded-files")
   public WebElement uploadedFileText;
+
+  @FindBy(css = "#table1 th")
+   public List<WebElement> header1Elements;
+
+  @FindBy(css = "#table1>tbody>tr:nth-child(1)>td")////table[@id='table1']/tbody/tr[1]/td
+  public List<WebElement> tableFirstRow;
+
+  @FindBy(xpath = "//table[@id='table1']/tbody/tr/td[2]")
+  public List<WebElement> firstRowSecondColon;
 
   public void clickOnLink(String linkText){
     for (WebElement link : links) {

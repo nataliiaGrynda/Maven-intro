@@ -20,9 +20,4 @@ public class _11_FileUpload extends Base{
     Assert.assertEquals(heroAppPage.fileUploadedH3.getText(), "File Uploaded!");
     Assert.assertEquals(heroAppPage.uploadedFileText.getText(), "myFileApple.xls");
   }
-
-
-
-
-
 }

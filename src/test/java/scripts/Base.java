@@ -1,5 +1,6 @@
 package scripts;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -21,6 +22,7 @@ public class Base {
   Wait fluentWait;
   SoftAssert softAssert;//initialize softAssert
   Actions actions;
+  JavascriptExecutor js;
   EtsySearchPage etsySearchPage;//
   TGApplicationPage tgApplicationPage;
   GoogleSearchPage googleSearchPage;
@@ -40,6 +42,7 @@ public class Base {
     fluentWait = new FluentWait(driver).withTimeout(30, TimeUnit.SECONDS).pollingEvery(2, TimeUnit.SECONDS).ignoring(Exception.class);
     softAssert = new SoftAssert();//initialize it in the before method
     actions = new Actions(driver);
+    js = (JavascriptExecutor) driver;
     etsySearchPage = new EtsySearchPage(driver);//where we create the object of that page
     tgApplicationPage = new TGApplicationPage(driver);
     googleSearchPage = new GoogleSearchPage(driver);
