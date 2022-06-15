@@ -13,14 +13,14 @@ public class _08_Alerts extends Base {
 3. Validate “Sign in” modal is displayed
    */
 
-//
-//    @Test(priority = 1, description = "Task -1")
-//     public void testEtsySignInModal(){
-//   driver.get("https://www.etsy.com/");
-//   etsySearchPage.signInButton.click();
-//      Assert.assertTrue(etsySearchPage.signInModal.isDisplayed());
-//      Assert.assertEquals(etsySearchPage.signInModalHeading.getText(), "Sign in to continue");
-//   }
+
+    @Test(priority = 1, description = "Task -1")
+     public void testEtsySignInModal(){
+   driver.get("https://www.etsy.com/");
+   etsySearchPage.signInButton.click();
+      Assert.assertTrue(etsySearchPage.signInModal.isDisplayed());
+      Assert.assertEquals(etsySearchPage.signInModalHeading.getText(), "Sign in");
+   }
 /*
 Go to http://the-internet.herokuapp.com/
 Click on "JavaScript Alerts" link

@@ -84,4 +84,13 @@ public class HeroAppPage {
       }
     }
   }
+  @FindBy(id = "username")
+  public WebElement username;
+
+  @FindBy(id = "password")
+  public WebElement password;
+
+  @FindBy(css = ".radius")
+  public WebElement loginButton;
+
 }
