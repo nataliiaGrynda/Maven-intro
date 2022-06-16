@@ -35,18 +35,11 @@ public class _01_AppleTest extends Base{
 
     Assert.assertEquals(actualURL, expectedURL);
   }
-
-   @Ignore
+  @Ignore
    @Test(priority = 3)
   public void X(){
     //fail() method is used to fail a test on purpose
     Assert.fail("Failure on purpose");
   }
-
   // 3. Teardown actions - after each test
-
-
-
-
-
 }
